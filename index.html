@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slaaptracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+    
+    <!-- Hoofd titel van de app -->
+    <header>
+
+        <h1>Slaaptracker</h1>
+
+        <p>
+            Houd eenvoudig je slaapuren bij.
+        </p>
+
+    </header>
+
+    <!-- Inhoud van de pagina -->
+    <main>
+
+        <!-- Kaart voor invoer -->
+        <section class="kaart">
+
+            <h2>Nieuwe slaapregistratie</h2>
+
+            <!-- Begintijd -->
+            <label for="beginTijd">
+
+                Tijd waarop je bent gaan slapen
+
+            </label>
+
+            <input
+                type="time"
+                id="beginTijd"
+            >
+
+            <!-- Eindtijd -->
+            <label for="eindTijd">
+
+                Tijd waarop je wakker werd
+
+            </label>
+
+            <input
+                type="time"
+                id="eindTijd"
+            >
+
+            <!-- Opslaan knop -->
+            <button id="opslaanKnop">
+
+                Registratie opslaan
+
+            </button>
+
+            <!-- Verwijder knop -->
+            <button id="verwijderKnop">
+
+                Alle gegevens verwijderen
+
+            </button>
+
+        </section>
+
+        <!-- Overzicht van registraties -->
+        <section class="kaart">
+
+            <h2>Overzicht</h2>
+
+            <div id="overzichtVak">
+
+            </div>
+
+        </section>
+
+        <!-- Statistieken -->
+        <section class="kaart">
+
+            <h2>Statistieken</h2>
+
+            <p>
+
+                Gemiddelde slaap:
+                <span id="gemiddeldeSlaap">
+
+                    0
+
+                </span>
+                uur
+
+            </p>
+
+            <p>
+
+                Kortste slaap:
+                <span id="minimumSlaap">
+
+                    0
+
+                </span>
+                uur
+
+            </p>
+
+            <p>
+
+                Langste slaap:
+                <span id="maximumSlaap">
+
+                    0
+
+                </span>
+                uur
+
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Bestand met berekeningen -->
+    <script src="javascript/berekeningen.js"></script>
+
+    <!-- Bestand voor LocalStorage -->
+    <script src="javascript/opslag.js"></script>
+
+    <!-- Bestand voor schermweergave -->
+    <script src="javascript/schermweergave.js"></script>
+
+    <!-- Hoofdprogramma -->
+    <script src="javascript/hoofdprogramma.js"></script>
+
+</body>
+</html>
