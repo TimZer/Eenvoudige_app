@@ -1,20 +1,24 @@
 /*
 FUNCTIE: Toon alle gegevens op scherm
 */
-function toonGegevensOpScherm() {
+    function toonGegevensOpScherm() {
 
-    // Zoek het overzicht vak op
-    let overzichtVak =
+        let overzichtVak =
         document.getElementById(
             "overzichtVak"
         );
 
-    // Maak het overzicht leeg
-    overzichtVak.innerHTML = "";
+        overzichtVak.innerHTML ="";
+
+
 
     // Haal alle gegevens op
     let lijstMetSlaapGegevens =
         haalGegevensOp();
+
+        console.log(
+    lijstMetSlaapGegevens
+);
 
     // Controleer of er gegevens zijn
     if (
@@ -107,6 +111,11 @@ function toonGegevensOpScherm() {
                 verwijderKnop
             );
 
+
+            // Voeg registratie toe aan overzicht
+            overzichtVak.appendChild(
+            slaapRegel
+            );
         }
 
     }

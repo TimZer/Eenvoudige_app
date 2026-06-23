@@ -32,6 +32,8 @@ opslaanKnop.addEventListener(
 
     function () {
 
+        console.log("Opslaan knop werkt");
+
         // Lees de begintijd uit het formulier
         let gekozenBeginTijd =
             document.getElementById(
