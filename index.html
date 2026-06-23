@@ -14,9 +14,9 @@
     <!-- Hoofd titel van de app -->
     <header>
 
-        <h1>Slaaptracker</h1>
+        <h1 data-key="title"></h1>
 
-        <p>
+        <p data-key="subtitle">
             Houd eenvoudig je slaapuren bij.
         </p>
 
@@ -28,12 +28,10 @@
         <!-- Kaart voor invoer -->
         <section class="kaart">
 
-            <h2>Nieuwe slaapregistratie</h2>
+            <h2 data-key="newSleep"></h2>
 
             <!-- Begintijd -->
-            <label for="beginTijd">
-
-                Tijd waarop je bent gaan slapen
+            <label for="beginTijd" data-key="bedtimeLabel">
 
             </label>
 
@@ -43,9 +41,7 @@
             >
 
             <!-- Eindtijd -->
-            <label for="eindTijd">
-
-                Tijd waarop je wakker werd
+            <label for="eindTijd" data-key="wakeLabel">
 
             </label>
 
@@ -55,14 +51,14 @@
             >
 
             <!-- Opslaan knop -->
-            <button id="opslaanKnop">
+            <button id="opslaanKnop" data-key="save">
 
                 Registratie opslaan
 
             </button>
 
             <!-- Verwijder knop -->
-            <button id="verwijderKnop">
+            <button id="verwijderKnop" data-key="deleteAll">
 
                 Alle gegevens verwijderen
 
@@ -73,7 +69,7 @@
         <!-- Overzicht van registraties -->
         <section class="kaart">
 
-            <h2>Overzicht</h2>
+            <h2 data-key="stats"></h2>
 
             <div id="overzichtVak">
 
@@ -84,11 +80,12 @@
         <!-- Statistieken -->
         <section class="kaart">
 
-            <h2>Statistieken</h2>
+            <h2 data-key="stats"></h2>
 
             <p>
 
                 Gemiddelde slaap:
+                <span data-key="avgSleepLabel"></span>
                 <span id="gemiddeldeSlaap">
 
                     0
@@ -126,6 +123,10 @@
 
     </main>
 
+
+
+    <!-- Bestand met taaldata -->
+    <script src="script.js"></script>
     <!-- Bestand met berekeningen -->
     <script src="javascript/berekening.js"></script>
     <!-- Bestand voor LocalStorage -->
@@ -135,9 +136,19 @@
     <!-- Hoofdprogramma -->
     <script src="javascript/hoofdprogramma.js"></script>
 
+        <!-- Knop om taal te wisselen -->
+     <button onclick="switchLang()" id="taalKnop">
+        Wissel taal
+    </button>   
+
 <footer>
     <p>&copy; 2026 Slaaptracker. Alle rechten voorbehouden.</p>
 </footer>
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+}
+</script>
 
 </body>
 </html>

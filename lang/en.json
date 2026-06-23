@@ -1,0 +1,11 @@
+{
+  "title": "Sleep Tracker",
+  "subtitle": "Easily track your sleep hours.",
+  "newSleep": "New sleep entry",
+  "bedtimeLabel": "Time you went to bed",
+  "wakeLabel": "Time you woke up",
+  "save": "Save entry",
+  "deleteAll": "Delete all data",
+  "stats": "Statistics",
+  "avgSleepLabel": "Average sleep:"
+}

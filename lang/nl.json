@@ -1,0 +1,11 @@
+{
+  "title": "Slaaptracker",
+  "subtitle": "Houd eenvoudig je slaapuren bij.",
+  "newSleep": "Nieuwe slaapregistratie",
+  "bedtimeLabel": "Tijd waarop je bent gaan slapen",
+  "wakeLabel": "Tijd waarop je wakker werd",
+  "save": "Registratie opslaan",
+  "deleteAll": "Alle gegevens verwijderen",
+  "stats": "Statistieken",
+  "avgSleepLabel": "Gemiddelde slaap:"
+}
