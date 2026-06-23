@@ -1,0 +1,283 @@
+/*
+ALGEMENE OPMAAK VAN DE PAGINA
+*/
+
+/* Opmaak voor de hele pagina */
+body {
+
+    /* Lettertype van de pagina */
+    font-family: Arial, sans-serif;
+
+    /* Achtergrondkleur */
+    background-color: #f4f4f4;
+
+    /* Ruimte rondom de pagina */
+    margin: 0;
+
+    /* Binnenruimte */
+    padding: 20px;
+
+}
+
+
+/*
+HEADER
+*/
+
+/* Opmaak van de header */
+header {
+
+    /* Tekst in het midden */
+    text-align: center;
+
+    /* Achtergrondkleur */
+    background-color: #2563eb;
+
+    /* Tekstkleur */
+    color: white;
+
+    /* Binnenruimte */
+    padding: 20px;
+
+    /* Afgeronde hoeken */
+    border-radius: 10px;
+
+}
+
+
+/* Titel van de app */
+header h1 {
+
+    /* Geen extra marge */
+    margin: 0;
+
+}
+
+
+/* Ondertekst van de app */
+header p {
+
+    /* Ruimte boven de tekst */
+    margin-top: 10px;
+
+}
+
+
+/*
+HOOFDINHOUD
+*/
+
+/* Hoofdgedeelte van de pagina */
+main {
+
+    /* Maximale breedte */
+    max-width: 800px;
+
+    /* Midden op de pagina */
+    margin: 20px auto;
+
+}
+
+
+/*
+KAARTEN
+*/
+
+/* Witte kaarten */
+.kaart {
+
+    /* Witte achtergrond */
+    background-color: white;
+
+    /* Binnenruimte */
+    padding: 20px;
+
+    /* Ruimte onder de kaart */
+    margin-bottom: 20px;
+
+    /* Afgeronde hoeken */
+    border-radius: 10px;
+
+    /* Schaduw */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+
+/* Titel van een kaart */
+.kaart h2 {
+
+    /* Geen marge boven */
+    margin-top: 0;
+
+}
+
+
+/*
+LABELS
+*/
+
+/* Tekst boven invoervelden */
+label {
+
+    /* Op nieuwe regel */
+    display: block;
+
+    /* Ruimte boven */
+    margin-top: 15px;
+
+    /* Vetgedrukte tekst */
+    font-weight: bold;
+
+}
+
+
+/*
+INVOERVELDEN
+*/
+
+/* Tijd invoervelden */
+input {
+
+    /* Volledige breedte */
+    width: 100%;
+
+    /* Binnenruimte */
+    padding: 10px;
+
+    /* Ruimte boven */
+    margin-top: 5px;
+
+    /* Ruimte onder */
+    margin-bottom: 15px;
+
+    /* Rand */
+    border: 1px solid #cccccc;
+
+    /* Afgeronde hoeken */
+    border-radius: 5px;
+
+    /* Breedte inclusief padding */
+    box-sizing: border-box;
+
+}
+
+
+/*
+KNOPPEN
+*/
+
+/* Opmaak voor alle knoppen */
+button {
+
+    /* Volledige breedte */
+    width: 100%;
+
+    /* Binnenruimte */
+    padding: 12px;
+
+    /* Ruimte boven */
+    margin-top: 10px;
+
+    /* Achtergrondkleur */
+    background-color: #2563eb;
+
+    /* Tekstkleur */
+    color: white;
+
+    /* Geen rand */
+    border: none;
+
+    /* Afgeronde hoeken */
+    border-radius: 5px;
+
+    /* Muis verandert naar handje */
+    cursor: pointer;
+
+}
+
+
+/* Effect wanneer gebruiker over knop beweegt */
+button:hover {
+
+    /* Donkerdere kleur */
+    background-color: #1d4ed8;
+
+}
+
+
+/*
+OVERZICHT VAK
+*/
+
+/* Hier komen alle registraties */
+#overzichtVak {
+
+    /* Ruimte boven */
+    margin-top: 15px;
+
+}
+
+
+/*
+SLAAP REGEL
+*/
+
+/* Eén registratie */
+.slaapRegel {
+
+    /* Achtergrond */
+    background-color: #eff6ff;
+
+    /* Binnenruimte */
+    padding: 10px;
+
+    /* Ruimte onder */
+    margin-bottom: 10px;
+
+    /* Afgeronde hoeken */
+    border-radius: 5px;
+
+}
+
+
+/*
+STATISTIEKEN
+*/
+
+/* Tekst van statistieken */
+#gemiddeldeSlaap,
+#minimumSlaap,
+#maximumSlaap {
+
+    /* Vetgedrukt */
+    font-weight: bold;
+
+    /* Blauwe kleur */
+    color: #2563eb;
+
+}
+
+
+/*
+RESPONSIVE DESIGN
+*/
+
+/* Opmaak voor kleine schermen */
+@media screen and (max-width: 600px) {
+
+    /* Minder ruimte op mobiel */
+    body {
+
+        padding: 10px;
+
+    }
+
+    /* Kleinere kaarten */
+    .kaart {
+
+        padding: 15px;
+
+    }
+
+}
