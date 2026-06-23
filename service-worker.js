@@ -26,6 +26,7 @@ let bestandenVoorOfflineGebruik = [
     "./",
     "./index.html",
     "./manifest.json",
+    "./script.js",
     "./opmaak/style.css",
     "./opmaak/icoon-192.png",
     "./opmaak/icoon-512.png",
@@ -33,7 +34,9 @@ let bestandenVoorOfflineGebruik = [
     "./javascript/opslag.js",
     "./javascript/schermweergave.js",
     "./javascript/vertaling.js",
-    "./javascript/hoofdprogramma.js"
+    "./javascript/hoofdprogramma.js",
+    "./lang/nl.js",
+    "./lang/en.js"
 ];
 
 /*
