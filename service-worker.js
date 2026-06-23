@@ -78,40 +78,34 @@ STAP 2: ACTIVEREN VAN DE SERVICE WORKER
 // wanneer je het versienummer hierboven hebt verhoogd.
 self.addEventListener(
 
-    "activate",
+    "fetch",
 
     function (activeerGebeurtenis) {
 
-        activeerGebeurtenis.waitUntil(
+        activeerGebeurtenis.respondWith(
 
-            caches.keys()
+            caches.match(
+                activeerGebeurtenis.request
+            )
             .then(
-                function (alleCacheNamen) {
+                function (gevondenInCache) {
 
-                    // Doorloop alle bestaande caches
-                    return Promise.all(
+                    // Controleer of het bestand in de cache stond
+                    if (
+                        gevondenInCache
+                    ) {
 
-                        alleCacheNamen.map(
+                        // Geef het bestand uit de cache terug (werkt offline)
+                        return gevondenInCache;
 
-                            function (bestaandeCacheNaam) {
+                    } else {
 
-                                // Controleer of dit een oude cache is
-                                if (
-                                    bestaandeCacheNaam !== cacheNaam
-                                ) {
+                        // Bestand stond niet in de cache: haal het op via internet
+                        return fetch(
+                            activeerGebeurtenis.request
+                        );
 
-                                    // Verwijder de oude cache
-                                    return caches.delete(
-                                        bestaandeCacheNaam
-                                    );
-
-                                }
-
-                            }
-
-                        )
-
-                    );
+                    }
 
                 }
             )
