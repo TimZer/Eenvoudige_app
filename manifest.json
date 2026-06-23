@@ -1,0 +1,26 @@
+{
+    "name": "Slaaptracker",
+    "short_name": "Slaaptracker",
+    "description": "Houd eenvoudig je slaapuren bij en bekijk je slaapstatistieken.",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#f4f4f4",
+    "theme_color": "#2563eb",
+    "lang": "nl",
+    "icons": [
+        {
+            "src": "opmaak/FullMoon2010.jpg",
+            "sizes": "192x192",
+            "type": "image/jpeg",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "opmaak/moon_1400.jpg",
+            "sizes": "512x512",
+            "type": "image/jpeg",
+            "purpose": "any maskable"
+        }
+    ]
+}
