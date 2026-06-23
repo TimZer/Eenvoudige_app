@@ -78,23 +78,27 @@ opslaanKnop.addEventListener(
                     gekozenEindTijd
                 );
 
-            // Maak nieuwe registratie
-            let nieuwSlaapGegeven = {
+                // Maak nieuwe registratie
+                let nieuwSlaapGegeven = {
 
-                // Sla datum op
+                // Uniek nummer voor deze registratie
+                identificatieNummer:
+                    Date.now(),
+
+                // Datum van vandaag
                 datum:
                     new Date()
                     .toLocaleDateString(),
 
-                // Sla begintijd op
+                // Begintijd
                 beginTijd:
                     gekozenBeginTijd,
 
-                // Sla eindtijd op
+                // Eindtijd
                 eindTijd:
                     gekozenEindTijd,
 
-                // Sla aantal uren op
+                // Aantal uren slaap
                 aantalUrenSlaap:
                     aantalUrenSlaap
 

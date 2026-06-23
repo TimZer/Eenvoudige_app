@@ -92,3 +92,46 @@ function controleerOfGegevensBestaan() {
     }
 
 }
+
+/*
+FUNCTIE: Verwijder één registratie
+*/
+function verwijderRegistratie(
+    identificatieNummer
+) {
+
+    // Haal alle gegevens op
+    let lijstMetSlaapGegevens =
+        haalGegevensOp();
+
+    // Nieuwe lege lijst
+    let nieuweLijstMetSlaapGegevens =
+        [];
+
+    // Doorloop alle registraties
+    for (
+        let slaapGegeven
+        of lijstMetSlaapGegevens
+    ) {
+
+        // Controleer of dit NIET de registratie is
+        if (
+            slaapGegeven.identificatieNummer !==
+            identificatieNummer
+        ) {
+
+            // Bewaar registratie
+            nieuweLijstMetSlaapGegevens.push(
+                slaapGegeven
+            );
+
+        }
+
+    }
+
+    // Sla nieuwe lijst op
+    slaGegevensOp(
+        nieuweLijstMetSlaapGegevens
+    );
+
+}

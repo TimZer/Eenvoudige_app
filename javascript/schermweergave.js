@@ -53,28 +53,58 @@ function toonGegevensOpScherm() {
             slaapRegel.className =
                 "slaapRegel";
 
-            // Zet tekst in het blok
+           // Toon gegevens
             slaapRegel.innerHTML =
 
-                "<strong>Datum:</strong> " +
-                slaapGegeven.datum +
-                "<br>" +
+            "<strong>Datum:</strong> " +
+            slaapGegeven.datum +
+            "<br>" +
 
-                "<strong>Begintijd:</strong> " +
-                slaapGegeven.beginTijd +
-                "<br>" +
+            "<strong>Begintijd:</strong> " +
+            slaapGegeven.beginTijd +
+            "<br>" +
 
-                "<strong>Eindtijd:</strong> " +
-                slaapGegeven.eindTijd +
-                "<br>" +
+            "<strong>Eindtijd:</strong> " +
+            slaapGegeven.eindTijd +
+            "<br>" +
 
-                "<strong>Aantal uren slaap:</strong> " +
-                slaapGegeven.aantalUrenSlaap +
-                " uur";
+            "<strong>Aantal uren slaap:</strong> " +
+            slaapGegeven.aantalUrenSlaap +
+            " uur" +
+            "<br><br>";
 
-            // Voeg blok toe aan overzicht
-            overzichtVak.appendChild(
-                slaapRegel
+            // Maak verwijder knop
+            let verwijderKnop =
+                document.createElement(
+                    "button"
+                );
+
+            // Tekst op knop
+            verwijderKnop.textContent =
+                "Verwijderen";
+
+            // Luister naar klik
+            verwijderKnop.addEventListener(
+
+                "click",
+
+                function () {
+
+                    // Verwijder registratie
+                    verwijderRegistratie(
+                        slaapGegeven.identificatieNummer
+                    );
+
+                    // Vernieuw scherm
+                    vernieuwScherm();
+
+                }
+
+            );
+
+            // Voeg knop toe aan registratie
+            slaapRegel.appendChild(
+                verwijderKnop
             );
 
         }
