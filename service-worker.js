@@ -7,9 +7,7 @@ en opslaan in een cache, zodat ze later zonder internet weer gebruikt
 kunnen worden.
 */
 
-/*
-NAAM EN VERSIE VAN DE CACHE
-*/
+/*NAAM EN VERSIE VAN DE CACHE*/
 // Naam van de opslagruimte (cache) voor deze app
 let cacheNaam = "slaaptracker-cache-v1";
 
@@ -17,9 +15,7 @@ let cacheNaam = "slaaptracker-cache-v1";
 // (bijvoorbeeld naar "slaaptracker-cache-v2"). Daardoor maakt de browser
 // een nieuwe cache aan en gooit hij de oude, verouderde bestanden weg.
 
-/*
-LIJST MET BESTANDEN DIE OFFLINE BESCHIKBAAR MOETEN ZIJN
-*/
+/*LIJST MET BESTANDEN DIE OFFLINE BESCHIKBAAR MOETEN ZIJN*/
 // Dit is de "app shell": alle bestanden die de app nodig heeft om te
 // kunnen draaien, ook zonder internet.
 let bestandenVoorOfflineGebruik = [
@@ -39,9 +35,7 @@ let bestandenVoorOfflineGebruik = [
     "./lang/en.js"
 ];
 
-/*
-STAP 1: INSTALLEREN VAN DE SERVICE WORKER
-*/
+/*STAP 1: INSTALLEREN VAN DE SERVICE WORKER*/
 // Dit gebeurt één keer, de eerste keer dat de browser deze service worker
 // tegenkomt. Hier vullen we de cache met alle bestanden uit de lijst.
 self.addEventListener(
@@ -73,9 +67,7 @@ self.addEventListener(
 
 );
 
-/*
-STAP 2: ACTIVEREN VAN DE SERVICE WORKER
-*/
+/*STAP 2: ACTIVEREN VAN DE SERVICE WORKER*/
 // Dit gebeurt nadat de service worker is geïnstalleerd. Hier ruimen we
 // oude caches op, zodat er geen verouderde bestanden blijven liggen
 // wanneer je het versienummer hierboven hebt verhoogd.
@@ -125,9 +117,7 @@ self.addEventListener(
 
 );
 
-/*
-STAP 3: REAGEREN OP NETWERKVERZOEKEN (FETCH)
-*/
+/*STAP 3: REAGEREN OP NETWERKVERZOEKEN (FETCH)*/
 // Iedere keer dat de app om een bestand vraagt (bijvoorbeeld een
 // JavaScript-bestand of een afbeelding), gaat deze functie eerst kijken
 // of dat bestand al in de cache ligt. Zo niet, dan wordt het bestand
