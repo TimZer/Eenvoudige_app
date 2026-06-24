@@ -1,6 +1,4 @@
-/*
-FUNCTIE: Toon alle gegevens op scherm
-*/
+/*FUNCTIE: Toon alle gegevens op scherm*/
     function toonGegevensOpScherm() {
 
         let overzichtVak =
@@ -122,9 +120,7 @@ FUNCTIE: Toon alle gegevens op scherm
 
 }
 
-/*
-FUNCTIE: Toon statistieken
-*/
+/*FUNCTIE: Toon statistieken*/
 function toonStatistiekenOpScherm() {
 
     // Haal alle gegevens op
@@ -181,9 +177,7 @@ function toonStatistiekenOpScherm() {
 
 }
 
-/*
-FUNCTIE: Vernieuw scherm
-*/
+/*FUNCTIE: Vernieuw scherm*/
 function vernieuwScherm() {
 
     // Toon overzicht

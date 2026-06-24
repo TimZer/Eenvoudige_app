@@ -1,6 +1,4 @@
-/*
-FUNCTIE: Bereken aantal uren slaap
-*/
+/*FUNCTIE: Bereken aantal uren slaap*/
 function berekenAantalUrenSlaap(
     beginTijd,
     eindTijd
@@ -68,9 +66,7 @@ function berekenAantalUrenSlaap(
 
 }
 
-/*
-FUNCTIE: Bereken gemiddelde slaap
-*/
+/*FUNCTIE: Bereken gemiddelde slaap*/
 function berekenGemiddeldeSlaap(
     lijstMetSlaapGegevens
 ) {
@@ -120,9 +116,7 @@ function berekenGemiddeldeSlaap(
 
 }
 
-/*
-FUNCTIE: Bereken minimum slaap
-*/
+/*FUNCTIE: Bereken minimum slaap*/
 function berekenMinimumSlaap(
     lijstMetSlaapGegevens
 ) {
@@ -182,9 +176,7 @@ function berekenMinimumSlaap(
 
 }
     
-/*
-FUNCTIE: Bereken maximum slaap
-*/
+/*FUNCTIE: Bereken maximum slaap*/
 function berekenMaximumSlaap(
     lijstMetSlaapGegevens
 ) {

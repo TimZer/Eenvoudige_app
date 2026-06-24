@@ -1,6 +1,4 @@
-/*
-FUNCTIE: Gegevens opslaan
-*/
+/*FUNCTIE: Gegevens opslaan*/
 function slaGegevensOp(
     lijstMetSlaapGegevens
 ) {
@@ -19,9 +17,7 @@ function slaGegevensOp(
 
 }
 
-/*
-FUNCTIE: Gegevens ophalen
-*/
+/*FUNCTIE: Gegevens ophalen*/
 function haalGegevensOp() {
 
     // Haal gegevens op uit LocalStorage
@@ -53,9 +49,7 @@ function haalGegevensOp() {
 
 }
 
-/*
-FUNCTIE: Verwijder alle gegevens
-*/
+/*FUNCTIE: Verwijder alle gegevens*/
 function verwijderAlleGegevens() {
 
     // Verwijder gegevens uit LocalStorage
@@ -65,9 +59,7 @@ function verwijderAlleGegevens() {
 
 }
 
-/*
-FUNCTIE: Controleer of gegevens bestaan
-*/
+/*FUNCTIE: Controleer of gegevens bestaan*/
 function controleerOfGegevensBestaan() {
 
     // Haal gegevens op uit opslag
@@ -93,9 +85,7 @@ function controleerOfGegevensBestaan() {
 
 }
 
-/*
-FUNCTIE: Verwijder één registratie
-*/
+/*FUNCTIE: Verwijder één registratie*/
 function verwijderRegistratie(
     identificatieNummer
 ) {
