@@ -10,6 +10,22 @@
     <link rel="stylesheet" href="opmaak/style.css">
     <link rel="manifest" href="manifest.json">
     <meta  name="theme-color"content="#2563eb">
+        <script>
+        window.addEventListener("load", async () => {
+            if (!("serviceWorker" in navigator)) {
+                return;
+            }
+
+            try {
+                await navigator.serviceWorker.register("../serviceworker.js");
+                console.log("Service worker registered.");
+            }
+
+            catch (error) {
+                console.error("Service worker registration failed.", error);
+            }
+        });
+    </script>
 
 </head>
 <body class="bg-light">
@@ -172,18 +188,6 @@
     <script src="javascript/schermweergave.js"></script>
     <script src="javascript/hoofdprogramma.js"></script>
 
-    <!-- Service Worker -->
-    <script>
-        if (
-            "serviceWorker" in navigator
-        ) {
-
-            navigator.serviceWorker.register(
-                "service-worker.js"
-            );
-
-        }
-    </script>
 
 </body>
 </html>
