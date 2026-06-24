@@ -1,478 +1,96 @@
+/*KLEUREN VAN DE APP*/
 :root {
 
-    /* Donkere kant van de "nachthemel"-gradient in de header */
-    --kleur-nacht-donker: #1e1b4b;
-
-    /* Hoofdkleur van de app (knoppen, accenten, links) */
+    /* Hoofdkleur */
     --kleur-primair: #2563eb;
 
-    /* Iets donkerder blauw, gebruikt bij hover-effecten */
-    --kleur-primair-donker: #1d4ed8;
-
-    /* Zachte achtergrondkleur van de hele pagina */
+    /* Achtergrond */
     --kleur-achtergrond: #f1f3f9;
 
-    /* Kleur van de witte kaarten */
-    --kleur-kaart: #ffffff;
-
-    /* Hoofdkleur van de tekst */
+    /* Tekstkleur */
     --kleur-tekst: #1f2330;
 
-    /* Wat zachtere tekstkleur, voor minder belangrijke tekst */
+    /* Zachte tekstkleur */
     --kleur-tekst-zacht: #6b7280;
 
-    /* Kleur van dunne randjes */
-    --kleur-rand: #e2e5ec;
-
-    /* Afronding van grote vlakken, zoals kaarten en de header */
-    --radius-groot: 18px;
-
-    /* Afronding van kleinere onderdelen, zoals knoppen en invoervelden */
-    --radius-klein: 10px;
-
-    /* Zachte schaduw die we steeds hergebruiken */
-    --schaduw: 0 4px 16px rgba(30, 41, 99, 0.08);
-
 }
 
-/* Opmaak voor de hele pagina */
+/*PAGINA*/
 body {
 
-    /* Lettertype van de pagina*/
-    font-family: Arial, sans-serif;
+    background-color: var(
+        --kleur-achtergrond
+    );
 
-    /* Tekstkleur */
-    color: var(--kleur-tekst);
+    color: var(
+        --kleur-tekst
+    );
 
-    /* Achtergrondkleur */
-    background-color: var(--kleur-achtergrond);
-
-    /* Geen extra ruimte rondom de pagina */
-    margin: 0;
-
-    /* Binnenruimte */
-    padding: 20px;
+    font-family:
+        Arial,
+        sans-serif;
 
 }
 
-
-/*
-HEADER
-*/
-
-/* Opmaak van de header */
-header {
-
-    /* Tekst in het midden */
-    text-align: center;
-
-    /* "Nachthemel": een zachte overgang van donker naar het blauw van de app */
-    background: linear-gradient(135deg, var(--kleur-nacht-donker), var(--kleur-primair));
-
-    /* Tekstkleur */
-    color: white;
-
-    /* Binnenruimte (iets meer ruimte boven/onder dan links/rechts) */
-    padding: 28px 20px;
-
-    /* Afgeronde hoeken */
-    border-radius: var(--radius-groot);
-
-    /* Zachte schaduw, geeft diepte */
-    box-shadow: var(--schaduw);
-
-}
-/* Titel van de app */
+/*HEADER*/
 header h1 {
 
-    /* Geen extra marge */
-    margin: 0;
-
-    /* Iets groter dan de standaard h1 */
-    font-size: 1.8rem;
-
-    /* Extra dikke letters voor een duidelijke titel */
-    font-weight: 800;
+    font-weight: bold;
 
 }
-/* Ondertekst van de app */
+
 header p {
 
-    /* Ruimte boven de tekst */
-    margin-top: 10px;
-
-    /* Iets transparanter wit, voor minder nadruk dan de titel */
-    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 0;
 
 }
-/*
-TAALKNOP
-*/
-/* Knop om van taal te wisselen (Nederlands / Engels) */
+
+/*TAALKNOP*/
 #taalKnop {
 
-    /* Niet de volledige breedte, past rechts in de header */
-    width: auto;
+    margin-top: 20px;
 
-    /* Uitlijnen aan de rechterkant van de header */
-    float: right;
-
-    /* Kleinere knop dan de andere knoppen */
-    padding: 6px 16px;
-
-    /* Iets transparante witte achtergrond */
-    background-color: rgba(255, 255, 255, 0.15);
-
-    /* Witte rand */
-    border: 1px solid rgba(255, 255, 255, 0.5);
-
-    /* Helemaal rond aan de zijkanten (pil-vorm) */
-    border-radius: 999px;
-
-    /* Iets kleinere letters */
-    font-size: 0.85rem;
-
-    /* Geen extra ruimte boven de knop nodig */
-    margin-top: 0;
-
-    /* Zachte overgang bij hover */
-    transition: background-color 0.2s ease;
-
-}
-
-/* Effect wanneer gebruiker over de taalknop beweegt */
-#taalKnop:hover {
-
-    /* Iets meer gevulde achtergrond */
-    background-color: rgba(255, 255, 255, 0.3);
-
-}
-/*
-HOOFDINHOUD
-*/
-/* Hoofdgedeelte van de pagina */
-main {
-
-    /* Maximale breedte */
-    max-width: 800px;
-
-    /* Midden op de pagina, met ruimte boven en onder */
-    margin: 20px auto;
-
-}
-/*
-KAARTEN
-*/
-/* Witte kaarten */
-.kaart {
-
-    /* Witte achtergrond */
-    background-color: var(--kleur-kaart);
-
-    /* Binnenruimte */
-    padding: 24px;
-
-    /* Ruimte onder de kaart */
     margin-bottom: 20px;
 
-    /* Afgeronde hoeken */
-    border-radius: var(--radius-groot);
-
-    /* Dun randje, zorgt voor extra rust naast de schaduw */
-    border: 1px solid var(--kleur-rand);
-
-    /* Zachte schaduw */
-    box-shadow: var(--schaduw);
-
-}
-/* Titel van een kaart */
-.kaart h2 {
-
-    /* Geen marge boven */
-    margin-top: 0;
-
-    /* Iets kleiner dan de standaard h2 */
-    font-size: 1.2rem;
-
-    /* Dikke letters */
-    font-weight: 800;
-
-    /* Hoofdkleur van de app, zodat de titel opvalt */
-    color: var(--kleur-primair);
-
-}
-
-/*
-LABELS
-*/
-/* Tekst boven invoervelden */
-label {
-
-    /* Op nieuwe regel */
-    display: block;
-
-    /* Ruimte boven */
-    margin-top: 15px;
-
-    /* Vetgedrukte tekst */
-    font-weight: 700;
-
-    /* Iets zachtere tekstkleur dan zwart */
-    color: var(--kleur-tekst-zacht);
-
-    /* Iets kleinere letters */
-    font-size: 0.9rem;
-
-}
-/*
-INVOERVELDEN
-*/
-/* Tijd invoervelden */
-input {
-
-    /* Volledige breedte */
-    width: 100%;
-
-    /* Binnenruimte */
-    padding: 10px 12px;
-
-    /* Ruimte boven */
-    margin-top: 5px;
-
-    /* Ruimte onder */
-    margin-bottom: 15px;
-
-    /* Rand */
-    border: 1px solid var(--kleur-rand);
-
-    /* Afgeronde hoeken */
-    border-radius: var(--radius-klein);
-
-    /* Breedte inclusief padding */
-    box-sizing: border-box;
-
-    /* Zelfde lettertype als de rest van de pagina */
-    font-family: inherit;
-
-    /* Iets groter lettertype, makkelijker leesbaar */
-    font-size: 1rem;
-
-    /* Zachte overgang bij focus */
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-
 }
 
 
-/* Opmaak wanneer een invoerveld is geselecteerd (focus) */
-input:focus {
-
-    /* Verwijder de standaard browic-omlijning */
-    outline: none;
-
-    /* Gebruik onze hoofdkleur voor de rand */
-    border-color: var(--kleur-primair);
-
-    /* Zachte blauwe gloed rondom het veld, goed te zien voor toetsenbordgebruik */
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-
-}
-/*
-KNOPPEN
-*/
-
-/* Opmaak voor alle knoppen */
-button {
-
-    /* Volledige breedte */
-    width: 100%;
-
-    /* Binnenruimte */
-    padding: 13px;
-
-    /* Ruimte boven */
-    margin-top: 10px;
-
-    /* Achtergrondkleur */
-    background-color: var(--kleur-primair);
-
-    /* Tekstkleur */
-    color: white;
-
-    /* Geen rand */
-    border: none;
-
-    /* Afgeronde hoeken */
-    border-radius: var(--radius-klein);
-
-    /* Iets groter en dikker lettertype */
-    font-size: 1rem;
-    font-weight: 700;
-
-    /* Zelfde lettertype als de rest van de pagina */
-    font-family: inherit;
-
-    /* Muis verandert naar handje */
-    cursor: pointer;
-
-    /* Zachte overgang bij hover (kleur én een klein beetje omhoog) */
-    transition: background-color 0.2s ease, transform 0.2s ease;
-
-}
-
-
-/* Effect wanneer gebruiker over knop beweegt */
-button:hover {
-
-    /* Donkerdere kleur */
-    background-color: var(--kleur-primair-donker);
-
-    /* Knop schuift een klein beetje omhoog */
-    transform: translateY(-1px);
-
-}
-
-
-/* Effect op het moment dat er geklikt wordt */
-button:active {
-
-    /* Knop zakt weer terug naar zijn plek */
-    transform: translateY(0);
-
-}
-
-
-/*
-OVERZICHT VAK
-*/
-
-/* Hier komen alle registraties */
+/*OVERZICHT*/
 #overzichtVak {
 
-    /* Ruimte boven */
     margin-top: 15px;
 
 }
 
-/* Melding wanneer er nog geen registraties zijn */
-#overzichtVak p {
+/*REGISTRATIES*/
+.alert {
 
-    /* Zachtere tekstkleur */
-    color: var(--kleur-tekst-zacht);
-
-    /* Tekst in het midden */
-    text-align: center;
-
-    /* Wat extra binnenruimte */
-    padding: 10px 0;
+    margin-bottom: 15px;
 
 }
 
-/*
-SLAAP REGEL
-*/
-/* Eén registratie */
-.slaapRegel {
-
-    /* Achtergrond */
-    background-color: #eff6ff;
-
-    /* Binnenruimte */
-    padding: 12px 14px;
-
-    /* Ruimte onder */
-    margin-bottom: 10px;
-
-    /* Afgeronde hoeken */
-    border-radius: var(--radius-klein);
-
-    /* Dun blauw streepje aan de linkerkant, ter herkenning */
-    border-left: 4px solid var(--kleur-primair);
-
-}
-
-/*
-STATISTIEK REGELS
-*/
-
-/* Eén regel in het statistieken-blok (label + getal + eenheid) */
-.statRegel {
-
-    /* Label links, getal rechts */
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-
-    /* Ruimte tussen de regels */
-    padding: 8px 0;
-
-    /* Dun lijntje tussen de regels, behalve onder de laatste */
-    border-bottom: 1px solid var(--kleur-rand);
-
-}
-
-/* Geen lijntje meer onder de laatste statistiek-regel */
-.statRegel:last-child {
-
-    border-bottom: none;
-
-}
-
-/* Tekst van de waarden bij de statistieken */
+/*STATISTIEKEN*/
 #gemiddeldeSlaap,
 #minimumSlaap,
 #maximumSlaap {
 
-    /* Extra groot, zodat het getal opvalt */
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 
-    /* Vetgedrukt */
-    font-weight: 800;
+    color: var(
+        --kleur-primair
+    );
 
-    /* Blauwe kleur */
-    color: var(--kleur-primair);
+    font-weight: bold;
 
 }
 
-
-/*
-FOOTER
-*/
-
-/* Onderkant van de pagina */
+/*FOOTER*/
 footer {
 
-    /* Tekst in het midden */
-    text-align: center;
+    color: var(
+        --kleur-tekst-zacht
+    );
 
-    /* Ruimte boven de footer */
-    margin-top: 30px;
-
-    /* Iets kleinere, zachtere tekst */
-    font-size: 0.85rem;
-    color: var(--kleur-tekst-zacht);
-
-}
-
-
-/*
-RESPONSIVE DESIGN
-*/
-
-/* Opmaak voor kleine schermen */
-@media screen and (max-width: 600px) {
-
-    /* Minder ruimte op mobiel */
-    body {
-
-        padding: 10px;
-
-    }
-
-    /* Kleinere kaarten */
-    .kaart {
-
-        padding: 18px;
-
-    }
+    font-size: 0.9rem;
 
 }

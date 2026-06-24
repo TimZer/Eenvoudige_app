@@ -3,151 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>slaaptracker</title>
-    <link rel="stylesheet" href="opmaak/style.css">
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#2563eb">
+    <title>Slaaptracker</title>
+
+<head>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+    <link
+        rel="stylesheet"
+        href="opmaak/style.css"
+    >
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+    <meta
+        name="theme-color"
+        content="#2563eb"
+    >
 
 </head>
-<body>
-    
-    <!-- Hoofd titel van de app -->
-    <header>
 
-        <h1 data-key="title"></h1>
+<body class="bg-light">
 
-        <p data-key="subtitle">
-            Houd eenvoudig je slaapuren bij.
-        </p>
+    <!-- Header -->
+    <header class="container mt-4">
+
+        <div class="bg-primary text-white p-4 rounded shadow">
+
+            <h1
+                class="text-center"
+                data-key="title"
+            >
+                Slaaptracker
+            </h1>
+
+            <p
+                class="text-center mb-0"
+                data-key="subtitle"
+            >
+                Houd eenvoudig je slaapuren bij.
+            </p>
+
+        </div>
 
     </header>
 
-    <!-- Inhoud van de pagina -->
-    <main>
+    <!-- Hoofdinhoud -->
+    <main class="container mt-4">
 
-        <!-- Kaart voor invoer -->
-        <section class="kaart">
+        <!-- Invoerkaart -->
+        <section class="card shadow-sm mb-4">
 
-            <h2 data-key="newSleep"></h2>
+            <div class="card-body">
 
-            <!-- Begintijd -->
-            <label for="beginTijd" data-key="bedtimeLabel">
+                <h2
+                    class="h4 text-primary"
+                    data-key="newSleep"
+                >
+                    Nieuwe registratie
+                </h2>
 
-            </label>
+                <!-- Begintijd -->
+                <label
+                    for="beginTijd"
+                    class="form-label mt-3"
+                    data-key="bedtimeLabel"
+                >
+                    Bedtijd
+                </label>
 
-            <input
-                type="time"
-                id="beginTijd"
-            >
+                <input
+                    type="time"
+                    id="beginTijd"
+                    class="form-control"
+                >
 
-            <!-- Eindtijd -->
-            <label for="eindTijd" data-key="wakeLabel">
+                <!-- Eindtijd -->
+                <label
+                    for="eindTijd"
+                    class="form-label mt-3"
+                    data-key="wakeLabel"
+                >
+                    Opstaantijd
+                </label>
 
-            </label>
+                <input
+                    type="time"
+                    id="eindTijd"
+                    class="form-control"
+                >
 
-            <input
-                type="time"
-                id="eindTijd"
-            >
+                <!-- Opslaan knop -->
+                <button
+                    id="opslaanKnop"
+                    class="btn btn-primary w-100 mt-3"
+                    data-key="save"
+                >
+                    Registratie opslaan
+                </button>
 
-            <!-- Opslaan knop -->
-            <button id="opslaanKnop" data-key="save">
+                <!-- Verwijderen knop -->
+                <button
+                    id="verwijderKnop"
+                    class="btn btn-danger w-100 mt-2"
+                    data-key="deleteAll"
+                >
+                    Alle gegevens verwijderen
+                </button>
 
-                Registratie opslaan
-
-            </button>
-
-            <!-- Verwijder knop -->
-            <button id="verwijderKnop" data-key="deleteAll">
-
-                Alle gegevens verwijderen
-
-            </button>
+            </div>
 
         </section>
 
-        <!-- Overzicht van registraties -->
-        <section class="kaart">
+        <!-- Overzicht -->
+        <section class="card shadow-sm mb-4">
 
-            <h2 data-key="stats"></h2>
+            <div class="card-body">
 
-            <div id="overzichtVak">
+                <h2
+                    class="h4 text-primary"
+                    data-key="stats"
+                >
+                    Overzicht
+                </h2>
+
+                <div id="overzichtVak">
+
+                </div>
 
             </div>
 
         </section>
 
         <!-- Statistieken -->
-        <section class="kaart">
+        <section class="card shadow-sm mb-4">
 
-            <h2 data-key="stats"></h2>
+            <div class="card-body">
 
-            <p>
+                <h2
+                    class="h4 text-primary"
+                    data-key="stats"
+                >
+                    Statistieken
+                </h2>
 
-                <span data-key="avgSleepLabel"></span>
-                <span id="gemiddeldeSlaap">
+                <p>
 
-                    0
+                    Gemiddelde slaap:
 
-                </span>
-                uur
+                    <strong id="gemiddeldeSlaap">
+                        0
+                    </strong>
 
-            </p>
+                    uur
 
-            <p>
+                </p>
 
-                Kortste slaap:
-                <span id="minimumSlaap">
+                <p>
 
-                    0
+                    Kortste slaap:
 
-                </span>
-                uur
+                    <strong id="minimumSlaap">
+                        0
+                    </strong>
 
-            </p>
+                    uur
 
-            <p>
+                </p>
 
-                Langste slaap:
-                <span id="maximumSlaap">
+                <p>
 
-                    0
+                    Langste slaap:
 
-                </span>
-                uur
+                    <strong id="maximumSlaap">
+                        0
+                    </strong>
 
-            </p>
+                    uur
+
+                </p>
+
+            </div>
 
         </section>
 
+        <!-- Taalknop -->
+        <button
+            onclick="switchLang()"
+            id="taalKnop"
+            class="btn btn-secondary"
+        >
+            Wissel taal
+        </button>
+
     </main>
 
+    <!-- Footer -->
+    <footer class="text-center mt-5 mb-3">
 
+        <p>
+            &copy; 2026 Slaaptracker.
+            Alle rechten voorbehouden.
+        </p>
 
-    <!-- Bestand met taaldata -->
+    </footer>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
-    <!-- Bestand met berekeningen -->
+
     <script src="javascript/berekening.js"></script>
-    <!-- Bestand voor LocalStorage -->
+
     <script src="javascript/opslag.js"></script>
-    <!-- Bestand voor schermweergave -->
+
     <script src="javascript/schermweergave.js"></script>
-    <!-- Hoofdprogramma -->
+
     <script src="javascript/hoofdprogramma.js"></script>
 
-        <!-- Knop om taal te wisselen -->
-     <button onclick="switchLang()" id="taalKnop">
-        Wissel taal
-    </button>   
+    <!-- Service Worker -->
+    <script>
 
-<footer>
-    <p>&copy; 2026 Slaaptracker. Alle rechten voorbehouden.</p>
-</footer>
-<script>
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js");
-}
-</script>
+        if (
+            "serviceWorker" in navigator
+        ) {
+
+            navigator.serviceWorker.register(
+                "service-worker.js"
+            );
+
+        }
+
+    </script>
 
 </body>
+
 </html>

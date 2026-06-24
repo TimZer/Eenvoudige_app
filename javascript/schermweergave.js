@@ -55,7 +55,7 @@ FUNCTIE: Toon alle gegevens op scherm
 
             // Geef CSS klasse mee
             slaapRegel.className =
-                "slaapRegel";
+                "alert alert-primary";
 
            // Toon gegevens
             slaapRegel.innerHTML =
