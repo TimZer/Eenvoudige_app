@@ -7,10 +7,17 @@ function loadLang(newLang) {
 
     //haal JSON bestand op van /lang map
     fetch("./lang/" + lang + ".json")
-        .then(res => res.json()) // zet response om naar JSON
-        .then(json => {
+        .then(
+            function (response) {
+                return response.json(); // zet response om naar JSON
+            }
+        ) // zet response om naar JSON
+        .then(
+            function (json) {
             data = json; // sla vertalingen op in variabele
             apply();     // pas ze toe op de pagina
+            toonGegevensOpScherm(); // toon de slaapgegevens in de juiste taal
+            toonStatistiekenOpScherm(); // toon de statistieken in de juiste taal
         });
 }
 
