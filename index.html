@@ -12,30 +12,23 @@
     <meta  name="theme-color"content="#2563eb">
 
 </head>
-
 <body class="bg-light">
-
     <!-- Header -->
     <header class="container mt-4">
-
         <div class="bg-primary text-white p-4 rounded shadow">
-
             <h1
                 class="text-center"
                 data-key="title"
             >
                 Slaaptracker
             </h1>
-
             <p
                 class="text-center mb-0"
                 data-key="subtitle"
             >
                 Houd eenvoudig je slaapuren bij.
             </p>
-
         </div>
-
     </header>
 
     <!-- Hoofdinhoud -->
@@ -43,9 +36,7 @@
 
         <!-- Invoerkaart -->
         <section class="card shadow-sm mb-4">
-
             <div class="card-body">
-
                 <h2
                     class="h4 text-primary"
                     data-key="newSleep"
@@ -100,81 +91,56 @@
                 >
                     Alle gegevens verwijderen
                 </button>
-
             </div>
-
         </section>
-
+        
         <!-- Overzicht -->
         <section class="card shadow-sm mb-4">
-
             <div class="card-body">
-
                 <h2
                     class="h4 text-primary"
                     data-key="stats"
                 >
                     Overzicht
                 </h2>
-
                 <div id="overzichtVak">
-
                 </div>
-
             </div>
-
         </section>
 
         <!-- Statistieken -->
         <section class="card shadow-sm mb-4">
-
             <div class="card-body">
-
                 <h2
                     class="h4 text-primary"
                     data-key="stats"
                 >
                     Statistieken
                 </h2>
-
                 <p>
-
                     Gemiddelde slaap:
-
-                    <strong id="gemiddeldeSlaap">
+                    <strong id="gemiddeldeSlaap" data-key="averageSleep">
                         0
                     </strong>
-
                     uur
-
                 </p>
 
                 <p>
-
                     Kortste slaap:
-
-                    <strong id="minimumSlaap">
+                    <strong id="minimumSlaap" data-key="shortestSleep">
                         0
                     </strong>
-
                     uur
-
                 </p>
 
                 <p>
-
                     Langste slaap:
-
-                    <strong id="maximumSlaap">
+                    <strong id="maximumSlaap" data-key="longestSleep">
                         0
                     </strong>
-
                     uur
-
                 </p>
-
             </div>
-
         </section>
 
         <!-- Taalknop -->
@@ -190,12 +156,7 @@
 
     <!-- Footer -->
     <footer class="text-center mt-5 mb-3">
-
-        <p>
-            &copy; 2026 Slaaptracker.
-            Alle rechten voorbehouden.
-        </p>
-
+        <p>&copy; 2026 Slaaptracker. Alle rechten voorbehouden.</p>
     </footer>
 
     <!-- Scripts -->
@@ -207,7 +168,6 @@
 
     <!-- Service Worker -->
     <script>
-
         if (
             "serviceWorker" in navigator
         ) {
@@ -217,9 +177,7 @@
             );
 
         }
-
     </script>
 
 </body>
-
 </html>

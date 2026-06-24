@@ -7,5 +7,7 @@
   "save": "Save entry",
   "deleteAll": "Delete all data",
   "stats": "Statistics",
-  "avgSleepLabel": "Average sleep:"
+  "avgSleepLabel": "Average sleep:",
+  "shortestSleepLabel": "Shortest sleep:",
+  "longestSleepLabel": "Longest sleep:"
 }
