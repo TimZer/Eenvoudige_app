@@ -1,30 +1,22 @@
-/*
-APP STARTEN
-*/
+/*APP STARTEN*/
 // Vernieuw het scherm zodra de pagina opent
 vernieuwScherm();
 
-/*
-OPSLAAN KNOP OPZOEKEN
-*/
+/*OPSLAAN KNOP OPZOEKEN*/
 // Zoek de opslaan knop
 let opslaanKnop =
     document.getElementById(
         "opslaanKnop"
     );
 
-/*
-VERWIJDER KNOP OPZOEKEN
-*/
+/*VERWIJDER KNOP OPZOEKEN*/
 // Zoek de verwijder knop
 let verwijderKnop =
     document.getElementById(
         "verwijderKnop"
     );
 
-/*
-OPSLAAN KNOP KLIKKEN
-*/
+/*OPSLAAN KNOP KLIKKEN*/
 // Luister naar klik op opslaan knop
 opslaanKnop.addEventListener(
 
@@ -144,9 +136,7 @@ opslaanKnop.addEventListener(
 
 );
 
-/*
-VERWIJDER KNOP KLIKKEN
-*/
+/*VERWIJDER KNOP KLIKKEN*/
 // Luister naar klik op verwijder knop
 verwijderKnop.addEventListener(
 
@@ -186,8 +176,8 @@ verwijderKnop.addEventListener(
         }
 
     }
-
-);
+); 
+// Als service workers beschikbaar zijn, wordt hier de service worker geregistreerd
 
 if ("serviceWorker" in navigator
 ) {
